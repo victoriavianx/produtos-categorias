@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  api:
+    container_name: api_entrega
+    build: .
+    ports:
+      - 3333:3333
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USER=victoriavianx
+      - DB_PASSWORD=1234
+      - DB=products_management
+    depends_on:
+      - db
+  db:
+    container_name: db_entrega
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=victoriavianx
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=products_management
+    volumes:
+      - ./create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
