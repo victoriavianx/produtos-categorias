@@ -4,9 +4,9 @@ import "dotenv/config";
 const database = new Client(
   process.env.NODE_ENV === "test"
     ? {
-        user: "victoriavianx",
+        user: "vicvg",
         host: "localhost",
-        database: "test_products",
+        database: "tests_products",
         password: "1234",
         port: 5432,
       }

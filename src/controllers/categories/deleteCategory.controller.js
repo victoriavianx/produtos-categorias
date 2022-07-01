@@ -6,7 +6,7 @@ const deleteCategory = async (req, res) => {
   try {
     const deletedCategory = await deleteCategoryService(categoryId);
 
-    return res.status(200).json({
+    return res.status(204).json({
       message: "Category deleted",
       category: deletedCategory,
     });
@@ -17,4 +17,4 @@ const deleteCategory = async (req, res) => {
   }
 };
 
-export default deleteCategoryService;
+export default deleteCategory;

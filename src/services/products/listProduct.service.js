@@ -2,7 +2,7 @@ import database from "../../database";
 
 const listProductService = async (productId) => {
   try {
-    const res = await database.query(`SELECT * FROM product WHERE id = $1`, [
+    const res = await database.query(`SELECT * FROM products WHERE id = $1`, [
       productId,
     ]);
 

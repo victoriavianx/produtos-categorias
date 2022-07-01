@@ -8,7 +8,7 @@ const updateProduct = async (req, res) => {
     const updatedProduct = await updateProductService(productId, data);
 
     return res.status(200).json({
-      message: "Product updated",
+      message: "Atualizado",
       product: updatedProduct,
     });
   } catch (error) {

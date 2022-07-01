@@ -7,7 +7,7 @@ const createCategoryService = async (data) => {
         categories (name)
       VALUES 
         ($1)
-      RETURNING id, name`,
+      RETURNING *`,
       [data.name]
     );
 

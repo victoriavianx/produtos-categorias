@@ -9,7 +9,7 @@ const isProductExists = async (req, res, next) => {
   );
 
   if (!findProduct) {
-    return res.status(404).json({
+    res.status(404).json({
       message: "Product not found",
     });
   }

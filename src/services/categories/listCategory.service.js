@@ -5,17 +5,13 @@ const listCategoryService = async (categoryId) => {
     const res = await database.query(
       `
         SELECT
-            id, name
+            *
         FROM
             categories
         WHERE 
             id = $1`,
       [categoryId]
     );
-
-    if (!res.rowCount) {
-      throw new Error("Category not found");
-    }
 
     return res.rows[0];
   } catch (error) {
