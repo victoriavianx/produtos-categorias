@@ -6,7 +6,7 @@ const deleteProduct = async (req, res) => {
   try {
     const deletedProduct = await deleteProductService(productId);
 
-    return res.status(200).json({
+    return res.status(204).json({
       message: "Product deleted",
       product: deletedProduct,
     });

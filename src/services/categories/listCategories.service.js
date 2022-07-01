@@ -4,7 +4,7 @@ const listCategoriesService = async () => {
   try {
     const res = await database.query(`
         SELECT 
-            id, name
+            *
         FROM 
             categories`);
 

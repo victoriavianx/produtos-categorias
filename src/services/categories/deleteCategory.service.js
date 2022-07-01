@@ -7,10 +7,6 @@ const deleteCategoryService = async (categoryId) => {
       [categoryId]
     );
 
-    if (!res.rowCount) {
-      throw new Error("Category not found");
-    }
-
     return res.rows[0];
   } catch (error) {
     throw new Error(error);

@@ -1,15 +1,14 @@
 import database from "../../database";
-import { v4 as uuidv4 } from "uuid";
 
 const createCategoryService = async (data) => {
   try {
     const res = await database.query(
       `INSERT INTO 
-        categories (id, name)
+        categories (name)
       VALUES 
-        ($1, $2)
+        ($1)
       RETURNING id, name`,
-      [uuidv4(), data.name]
+      [data.name]
     );
 
     return res.rows[0];

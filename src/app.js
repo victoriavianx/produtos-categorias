@@ -11,7 +11,7 @@ app.use(express.json());
 app.use("/categories", categoryRouter);
 app.use("/products", productsRouter);
 
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.NODE_ENV === "test" ? 3001 : process.env.PORT || 3000;
 
 export default app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

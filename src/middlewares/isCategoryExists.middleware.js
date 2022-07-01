@@ -8,7 +8,7 @@ const isCategoryExists = async (req, res, next) => {
     [categoryId]
   );
 
-  if (findCategory === false) {
+  if (!findCategory) {
     return res.status(404).json({
       message: "Category not found",
     });

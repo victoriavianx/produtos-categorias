@@ -12,10 +12,6 @@ const updateCategoryService = async (data, categoryId) => {
       [data.name, categoryId]
     );
 
-    if (!res.rowCount) {
-      throw new Error("User not found");
-    }
-
     return res.rows[0];
   } catch (error) {
     throw new Error(error);
