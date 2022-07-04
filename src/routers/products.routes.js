@@ -12,14 +12,9 @@ const productsRouter = Router();
 
 productsRouter.post("", createProduct);
 productsRouter.get("", listProducts);
-productsRouter.get("/:id", isProductExists, listProduct);
-productsRouter.patch("/:id", isProductExists, updateProduct);
-productsRouter.delete("/:id", isProductExists, deleteProduct);
-productsRouter.get(
-  "/categories/:category_id",
-  isProductExists,
-  isCategoryExists,
-  listProductByCategory
-);
+productsRouter.get("/:id", listProduct);
+productsRouter.patch("/:id", updateProduct);
+productsRouter.delete("/:id", deleteProduct);
+productsRouter.get("/categories/:category_id", listProductByCategory);
 
 export default productsRouter;

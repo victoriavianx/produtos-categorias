@@ -1,7 +1,7 @@
 import listProductByCategoryService from "../../services/products/listProductByCategory.service";
 
 const listProductByCategory = async (req, res) => {
-  const categoryId = req.params.id;
+  const categoryId = req.params.category_id;
 
   try {
     const product = await listProductByCategoryService(categoryId);
