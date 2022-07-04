@@ -15,6 +15,6 @@ productsRouter.get("", listProducts);
 productsRouter.get("/:id", listProduct);
 productsRouter.patch("/:id", updateProduct);
 productsRouter.delete("/:id", deleteProduct);
-productsRouter.get("/categories/:category_id", listProductByCategory);
+productsRouter.get("/category/:category_id", listProductByCategory);
 
 export default productsRouter;
