@@ -2,7 +2,7 @@
 
 Essa é uma aplicação backend simples para firmar conceitos básicos aprendidos no quarto módulo do curso de Desenvolvimento Web Full Stack da Kenzie Academy Brasil.
 
-## 🧐 Sobre
+## 🗒 Sobre
 
 Esta é uma API para criar tanto categorias quanto produtos e associá-los.
 
@@ -12,6 +12,32 @@ Esta é uma API para criar tanto categorias quanto produtos e associá-los.
 ![Node.JS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+
+## 🔧 Ferramentas
+
+- Dotenv
+- Jest
+- Nodemon
+- pg
+- Sucrase
+- Supertest
+- UUID
+
+## 🧐 Como utilizar
+
+Para iniciar este projeto, é necessário instalar as dependências. Portanto utilize o comando abaixo para instalar tais dependências:
+
+`yarn install`
+
+Crie um arquivo `.env` para configurar as variáveis de ambiente para conectar-se ao seu banco do PostgreSQL. Siga como base o arquivo `.env.example` disposto na raiz do projeto para configurar as variáveis:
+
+```
+DB_USER=
+DB_PASSWORD=
+DB_HOST=
+DB=
+DB_PORT=
+```
 
 ## 📌 Endpoints
 
